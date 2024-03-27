@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="619.0" prefWidth="827.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <HBox prefHeight="113.0" prefWidth="787.0">
+      <children>
+         <ListView fx:id="cakeListView" prefHeight="343.0" prefWidth="566.0" />
+         <ListView fx:id="orderListView" prefHeight="100.0" prefWidth="537.0" />
+      </children>
+   </HBox>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <GridPane prefHeight="75.0" prefWidth="404.0">
+           <columnConstraints>
+             <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.4000244140625" minWidth="10.0" prefWidth="119.79998779296875" />
+             <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.20001220703125" minWidth="10.0" prefWidth="286.20001220703125" />
+           </columnConstraints>
+           <rowConstraints>
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+            <children>
+               <Label text="id cake" />
+            
+                    <Label fx:id="welcomeText" prefHeight="38.0" prefWidth="133.0" text="type cake" GridPane.rowIndex="1" />
+               <TextField fx:id="typeTextField" prefHeight="26.0" prefWidth="258.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <TextField fx:id="idTextField" prefHeight="26.0" prefWidth="241.0" GridPane.columnIndex="1" />
+            </children>
+         </GridPane>
+         <GridPane prefHeight="94.0" prefWidth="354.0">
+           <columnConstraints>
+             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           </columnConstraints>
+           <rowConstraints>
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+            <children>
+               <Label prefHeight="18.0" prefWidth="174.0" text="       id order" />
+               <Label prefHeight="23.0" prefWidth="178.0" text="       date order" GridPane.rowIndex="2" />
+               <Label prefHeight="18.0" prefWidth="170.0" text="       id cakes" GridPane.rowIndex="1" />
+               <TextField fx:id="idCakesOrderTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <TextField fx:id="idOrderTextField" GridPane.columnIndex="1" />
+               <TextField fx:id="dateTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+         </GridPane>
+      </children>
+   </HBox>
+   <HBox prefHeight="55.0" prefWidth="787.0">
+      <children>
+         <HBox prefHeight="35.0" prefWidth="506.0" spacing="20.0">
+            <children>
+               <Button fx:id="addCakeButton" mnemonicParsing="false" onMouseClicked="#addCakeButton" prefHeight="30.0" prefWidth="99.0" text="add cake" />
+               <Button fx:id="modifyCakeButton" mnemonicParsing="false" onMouseClicked="#modifyCakeButton" prefHeight="30.0" prefWidth="99.0" text="modify cake" />
+               <Button fx:id="deleteCakeButton" mnemonicParsing="false" onMouseClicked="#deleteCakeButton" prefHeight="30.0" prefWidth="99.0" text="delete cake" />
+            </children>
+         </HBox>
+         <HBox prefHeight="77.0" prefWidth="438.0" spacing="20.0">
+            <children>
+               <Button fx:id="addOrderButton" mnemonicParsing="false" onMouseClicked="#addOrderButton" prefHeight="30.0" prefWidth="99.0" text="add order" />
+               <Button fx:id="modifyOrderButton" mnemonicParsing="false" onMouseClicked="#modifyOrderButton" prefHeight="30.0" prefWidth="99.0" text="modify order" />
+               <Button fx:id="deleteOrderButton" mnemonicParsing="false" onMouseClicked="#deleteOrderButton" prefHeight="30.0" prefWidth="99.0" text="delete order" />
+            </children>
+         </HBox>
+      </children>
+   </HBox>
+   <HBox prefHeight="75.0" prefWidth="787.0">
+      <children>
+         <VBox prefHeight="162.0" prefWidth="160.0" spacing="20.0">
+            <children>
+               <Button fx:id="showCakesByDayButton" mnemonicParsing="false" onMouseClicked="#showCakesByDayButton" prefHeight="38.0" prefWidth="162.0" text="showCakesByDay" />
+               <Button fx:id="showCakesByMonthButton" mnemonicParsing="false" onMouseClicked="#showCakesByMonthButton" prefHeight="43.0" prefWidth="172.0" text="showCakesByMonth" />
+               <Button fx:id="mostOrderedCakesButton" mnemonicParsing="false" onMouseClicked="#mostOrderedCakesButton" prefHeight="47.0" prefWidth="180.0" text="mostOrderedCakes" />
+            </children>
+         </VBox>
+         <ListView fx:id="streamListView" prefHeight="158.0" prefWidth="586.0" />
+      </children>
+   </HBox>
+   <HBox prefHeight="199.0" prefWidth="787.0">
+      <children>
+         <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="138.0" prefWidth="786.0" text="cat">
+            <effect>
+               <ImageInput>
+                  <source>
+                     <Image url="file:/C:/Users/Raluca/Desktop/OIP2.jpeg" />
+                  </source>
+               </ImageInput>
+            </effect>
+         </Button>
+      </children>
+   </HBox>
+</VBox>
